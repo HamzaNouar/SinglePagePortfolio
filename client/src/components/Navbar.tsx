@@ -6,7 +6,6 @@ interface NavbarProps {
     home: MutableRefObject<HTMLDivElement | null>;
     about: MutableRefObject<HTMLDivElement | null>;
     services: MutableRefObject<HTMLDivElement | null>;
-    gallery: MutableRefObject<HTMLDivElement | null>;
     reviews: MutableRefObject<HTMLDivElement | null>;
     contact: MutableRefObject<HTMLDivElement | null>;
   };
@@ -67,7 +66,7 @@ const Navbar = ({ refs }: NavbarProps) => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {["home", "about", "services", "gallery", "reviews", "contact"].map((item) => (
+          {["home", "about", "services", "reviews", "contact"].map((item) => (
             <a
               key={item}
               href={`#${item}`}
@@ -105,7 +104,7 @@ const Navbar = ({ refs }: NavbarProps) => {
         }`}
       >
         <div className="container mx-auto px-4 py-3 flex flex-col space-y-3">
-          {["home", "about", "services", "gallery", "reviews", "contact"].map((item) => (
+          {["home", "about", "services", "reviews", "contact"].map((item) => (
             <a
               key={item}
               href={`#${item}`}

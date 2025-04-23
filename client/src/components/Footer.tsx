@@ -6,7 +6,6 @@ interface FooterProps {
     home: MutableRefObject<HTMLDivElement | null>;
     about: MutableRefObject<HTMLDivElement | null>;
     services: MutableRefObject<HTMLDivElement | null>;
-    gallery: MutableRefObject<HTMLDivElement | null>;
     reviews: MutableRefObject<HTMLDivElement | null>;
     contact: MutableRefObject<HTMLDivElement | null>;
   };
@@ -39,7 +38,7 @@ const Footer = ({ refs }: FooterProps) => {
           <div>
             <h4 className="font-montserrat font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {["home", "about", "services", "gallery", "reviews", "contact"].map((item) => (
+              {["home", "about", "services", "reviews", "contact"].map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => handleNavClick(item)}
