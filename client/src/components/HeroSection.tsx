@@ -1,16 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
-import Image2024_12_04 from "@assets/2024-12-04.jpg";
-import Image2024_07_08 from "@assets/2024-07-08.jpg";
-import Image2025_04_20 from "@assets/2025-04-20.jpg";
-import Image2025_04_05 from "@assets/2025-04-05.jpg";
-import Image2024_08_14_2 from "@assets/2024-08-14 (2).jpg";
-import Image2025_02_26 from "@assets/2025-02-26.jpg";
-import Image2024_08_14_1 from "@assets/2024-08-14 (1).jpg";
-import Image2025_02_03 from "@assets/2025-02-03.jpg";
-import Image2025_04_05_1 from "@assets/2025-04-05 (1).jpg";
-import Image2024_08_14 from "@assets/2024-08-14.jpg";
-import Image2024_10_27 from "@assets/2024-10-27.jpg";
 
 const HeroSection = () => {
   const { scrollToElement } = useSmoothScroll();
@@ -24,16 +13,22 @@ const HeroSection = () => {
   };
 
   return (
-    <section 
-      className="relative h-screen bg-cover bg-center flex items-center"
-      style={{
-        backgroundImage: `url(${Image2024_08_14_2})`,
-        backgroundPosition: 'center top',
-        backgroundSize: 'cover'
-      }}
-    >
-      <div className="absolute inset-0 hero-gradient"></div>
-      <div className="container mx-auto px-4 z-10 text-white">
+    <section className="relative h-screen flex items-center overflow-hidden">
+      <div className="absolute inset-0 w-full h-full">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="absolute w-full h-full object-cover"
+        >
+          <source src="assets/videoplayback.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 hero-gradient"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 z-10 text-white relative">
         <div className="max-w-3xl">
           <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
             Premium Auto Detailing &amp; Protection
