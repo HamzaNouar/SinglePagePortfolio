@@ -1,3 +1,8 @@
+import Image2024_12_04 from "@assets/2024-12-04.jpg";
+import Image2024_07_08 from "@assets/2024-07-08.jpg";
+import Image2025_04_20 from "@assets/2025-04-20.jpg";
+import Image2025_04_05 from "@assets/2025-04-05.jpg";
+
 const AboutSection = () => {
   return (
     <section className="section-padding bg-white">
@@ -61,23 +66,23 @@ const AboutSection = () => {
           
           <div className="grid grid-cols-2 gap-4">
             <div className="overflow-hidden rounded-lg h-48 md:h-56 lg:h-64">
-              <img src="https://images.unsplash.com/photo-1605515298946-d864079eb4c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              <img src={Image2024_12_04} 
                   alt="Auto detailing process" 
                   className="w-full h-full object-cover gallery-img" />
             </div>
             <div className="overflow-hidden rounded-lg h-48 md:h-56 lg:h-64">
-              <img src="https://images.unsplash.com/photo-1679678691006-0ad24fecb769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              <img src={Image2025_04_20} 
                   alt="Car detailing result" 
                   className="w-full h-full object-cover gallery-img" />
             </div>
             <div className="overflow-hidden rounded-lg h-48 md:h-56 lg:h-64">
-              <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                  alt="Professional car wash" 
+              <img src={Image2024_07_08} 
+                  alt="Professional car wash studio" 
                   className="w-full h-full object-cover gallery-img" />
             </div>
             <div className="overflow-hidden rounded-lg h-48 md:h-56 lg:h-64">
-              <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                  alt="Interior detailing" 
+              <img src={Image2025_04_05} 
+                  alt="Vehicle detailing" 
                   className="w-full h-full object-cover gallery-img" />
             </div>
           </div>

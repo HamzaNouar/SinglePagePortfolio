@@ -1,5 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import Image2024_12_04 from "@assets/2024-12-04.jpg";
+import Image2024_07_08 from "@assets/2024-07-08.jpg";
+import Image2025_04_20 from "@assets/2025-04-20.jpg";
+import Image2025_04_05 from "@assets/2025-04-05.jpg";
 
 const HeroSection = () => {
   const { scrollToElement } = useSmoothScroll();
@@ -16,7 +20,9 @@ const HeroSection = () => {
     <section 
       className="relative h-screen bg-cover bg-center flex items-center"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1610647752706-3bb12232b3c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')`
+        backgroundImage: `url(${Image2024_12_04})`,
+        backgroundPosition: 'center top',
+        backgroundSize: 'cover'
       }}
     >
       <div className="absolute inset-0 hero-gradient"></div>

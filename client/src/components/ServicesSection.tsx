@@ -1,4 +1,8 @@
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import Image2024_12_04 from "@assets/2024-12-04.jpg";
+import Image2024_07_08 from "@assets/2024-07-08.jpg";
+import Image2025_04_20 from "@assets/2025-04-20.jpg";
+import Image2025_04_05 from "@assets/2025-04-05.jpg";
 
 interface ServiceProps {
   title: string;
@@ -12,37 +16,37 @@ const services: ServiceProps[] = [
     title: "Ceramic Coating",
     description: "Professional-grade ceramic protection that shields your vehicle's paint from environmental damage while providing a brilliant, long-lasting shine.",
     price: "Starting at $299",
-    image: "https://images.unsplash.com/photo-1619726578880-c90eaebaa0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    image: Image2024_12_04
   },
   {
     title: "Paint Protection Film (PPF)",
     description: "Premium protective film that safeguards your vehicle against rock chips, scratches, and road debris while maintaining the original appearance.",
     price: "Starting at $499",
-    image: "https://images.unsplash.com/photo-1611288875785-476cab857f65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    image: Image2025_04_20
   },
   {
     title: "Premium Wash",
     description: "A thorough cleaning process that includes hand washing, drying, and finishing touches to restore your vehicle's shine and protect its surfaces.",
     price: "Starting at $59",
-    image: "https://images.unsplash.com/photo-1600880691759-ae96fd02fa3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    image: Image2024_07_08
   },
   {
     title: "Interior Detailing",
     description: "Comprehensive cleaning and conditioning of all interior surfaces, including leather treatment, carpet cleaning, and sanitization.",
     price: "Starting at $129",
-    image: "https://images.unsplash.com/photo-1602706294170-1781cb08f9ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    image: Image2025_04_05
   },
   {
     title: "Paint Correction",
     description: "Professional machine polishing to remove swirl marks, scratches, and imperfections, restoring your vehicle's paint to a showroom finish.",
     price: "Starting at $249",
-    image: "https://images.unsplash.com/photo-1636899550244-69ca2acd5299?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    image: Image2025_04_20
   },
   {
     title: "Headlight Restoration",
     description: "Revitalize cloudy, yellowed headlights to improve visibility and appearance, enhancing both safety and aesthetics.",
     price: "Starting at $79",
-    image: "https://images.unsplash.com/photo-1625424628919-dd96691673d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    image: Image2024_12_04
   }
 ];
 

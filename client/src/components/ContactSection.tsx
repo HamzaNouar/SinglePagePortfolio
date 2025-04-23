@@ -80,7 +80,7 @@ const ContactSection = () => {
           <div className="h-[400px] md:h-full rounded-lg overflow-hidden shadow-md">
             {/* Google Maps embed */}
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103599.56199287991!2d-5.901509303906245!3d35.7633055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b875cf04c132d%3A0x76bfc571bfb4e17a!2sTangier%2C%20Morocco!5e0!3m2!1sen!2sus!4v1685466767618!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.2376636062196!2d-5.8540853!3d35.7608679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b875ec2541c49%3A0x4d3264809c76823!2sAUTO%20SPA%20DETAILING%20%7C%20CERAMIC%20PROTECTION%20%7C%20PPF%20%7C%20PREMIUM%20WASH%20%7C!5e0!3m2!1sen!2sus!4v1684235879063!5m2!1sen!2sus" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
