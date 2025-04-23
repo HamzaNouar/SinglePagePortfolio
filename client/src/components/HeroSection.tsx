@@ -64,7 +64,7 @@ const HeroSection = () => {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <span className="ml-2">4.9 (38 reviews) • Car wash in Tangier</span>
+            <span className="ml-2">4.9 (52 reviews) • Auto Detailing in Tangier</span>
           </div>
         </div>
       </div>

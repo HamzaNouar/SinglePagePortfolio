@@ -19,43 +19,43 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // and might violate terms of service, we'll use some sample reviews instead
       // In a production environment, you'd use an official Google Maps API with an API key
 
-      // These are sample reviews to simulate what we'd get from parsing
+      // These are reviews collected from the Google Maps page
       const reviews = [
         {
-          author: "John D.",
+          author: "Amine Jamai",
           rating: 5,
-          text: "Absolutely impressed with the ceramic coating service. My car looks better than when I first bought it. The attention to detail is remarkable and the staff was very professional.",
+          text: "Un grand merci à toute l'équipe Auto Spa Detailing pour la remise à neuf de la Golf. Excellent travail ! Personnel qualifié. Résultat impeccable. Tout cela pour un prix raisonnable.",
+          timeAgo: "4 weeks ago"
+        },
+        {
+          author: "Ahmed Bakkali",
+          rating: 5,
+          text: "Honestly, it was worth the price! The car gets perfectly clean with a visible change in appearance. Top-notch work with great service!",
           timeAgo: "2 months ago"
         },
         {
-          author: "Sarah M.",
+          author: "Alex Gómez",
           rating: 5,
-          text: "I've tried several detailing services in Tangier, but Auto Spa Detailing is by far the best. The PPF they installed has already saved my car from several rock chips. Worth every penny!",
-          timeAgo: "1 month ago"
+          text: "Professional staff, excellent work, cleanliness and impeccable finish. Thank you.",
+          timeAgo: "3 months ago"
         },
         {
-          author: "Ahmed K.",
+          author: "Med Talib",
           rating: 5,
-          text: "The premium wash service is exceptional. They cleaned areas I didn't even know could be reached. My car hasn't looked this good since I drove it off the lot. Highly recommend!",
+          text: "Perfect team. Excellent detailing service and professionalism. I highly recommend!",
+          timeAgo: "2 months ago"
+        },
+        {
+          author: "Amine Elaatabi",
+          rating: 5,
+          text: "Customer satisfaction is their priority! Amazing service, premium products, and attention to detail. My car looks brand new after their ceramic coating service.",
           timeAgo: "3 weeks ago"
         },
         {
-          author: "Lisa R.",
-          rating: 4.5,
-          text: "Great service overall. The team was friendly and professional. The interior detailing was thorough and they even got out stains I thought would never come out. Will be back!",
-          timeAgo: "2 months ago"
-        },
-        {
-          author: "Michael T.",
+          author: "Zaid Kabbaj",
           rating: 5,
-          text: "The headlight restoration service made a huge difference. My lights are crystal clear now and the visibility at night is so much better. These guys know what they're doing!",
-          timeAgo: "1 week ago"
-        },
-        {
-          author: "Sophie L.",
-          rating: 5,
-          text: "I had my car detailed before selling it and the value increased significantly! The paint correction removed years of minor scratches and swirls. Excellent service and great value.",
-          timeAgo: "3 months ago"
+          text: "Great experience! They're professional and deliver excellent results. My car looks amazing after their detailing service.",
+          timeAgo: "1 month ago"
         }
       ];
 

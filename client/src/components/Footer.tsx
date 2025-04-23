@@ -120,7 +120,7 @@ const Footer = ({ refs }: FooterProps) => {
               </li>
               <li className="flex items-start">
                 <i className="fas fa-clock mt-1 mr-3 text-accent"></i>
-                <span className="text-gray-300">Mon-Fri: 9AM-8PM<br />Sat: 9AM-6PM</span>
+                <span className="text-gray-300">Mon-Fri: 9AM-8PM<br />Sat: 9AM-6PM<br />Sun: Closed</span>
               </li>
             </ul>
           </div>
