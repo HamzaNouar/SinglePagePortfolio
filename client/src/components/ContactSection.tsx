@@ -31,7 +31,21 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-medium mb-1">Phone:</h4>
-                  <p className="text-gray-600">+212 5XX-XXXXXX</p>
+                  <p className="text-gray-600">
+                    <a href="tel:+212662038056" className="hover:text-accent transition-colors">+212 662-038056</a>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start mb-4">
+                <div className="bg-secondary rounded-full w-10 h-10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                  <i className="fab fa-whatsapp"></i>
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-medium mb-1">WhatsApp:</h4>
+                  <p className="text-gray-600">
+                    <a href="https://wa.me/212625589099" className="hover:text-accent transition-colors">+212 625-589099</a>
+                  </p>
                 </div>
               </div>
               
@@ -67,8 +81,8 @@ const ContactSection = () => {
                 <a href="#" className="bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
                   <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#" className="bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
-                  <i className="fab fa-twitter"></i>
+                <a href="#" className="bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
+                  <i className="fab fa-whatsapp"></i>
                 </a>
                 <a href="#" className="bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
                   <i className="fab fa-youtube"></i>
