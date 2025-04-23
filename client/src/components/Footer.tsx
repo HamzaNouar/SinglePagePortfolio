@@ -102,15 +102,21 @@ const Footer = ({ refs }: FooterProps) => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
-                <span className="text-gray-300">Tangier 90000, Morocco</span>
+                <span className="text-gray-300">
+                  <a href="https://maps.app.goo.gl/P9H9yuhYeCuQi2fq7" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Tangier 90000, Morocco</a>
+                </span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-phone-alt mt-1 mr-3 text-accent"></i>
-                <span className="text-gray-300">+212 5XX-XXXXXX</span>
+                <span className="text-gray-300">
+                  <a href="tel:+212662038056" className="text-gray-300 hover:text-white transition-colors">+212 662-038056</a>
+                </span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-3 text-accent"></i>
-                <span className="text-gray-300">info@autospadetailing.com</span>
+                <span className="text-gray-300">
+                  <a href="mailto:info@autospadetailing.com" className="text-gray-300 hover:text-white transition-colors">info@autospadetailing.com</a>
+                </span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-clock mt-1 mr-3 text-accent"></i>
@@ -132,8 +138,8 @@ const Footer = ({ refs }: FooterProps) => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <i className="fab fa-twitter"></i>
+              <a href="https://wa.me/212625589099" className="text-gray-400 hover:text-white transition-colors">
+                <i className="fab fa-whatsapp"></i>
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <i className="fab fa-youtube"></i>
