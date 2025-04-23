@@ -4,6 +4,13 @@ import Image2024_12_04 from "@assets/2024-12-04.jpg";
 import Image2024_07_08 from "@assets/2024-07-08.jpg";
 import Image2025_04_20 from "@assets/2025-04-20.jpg";
 import Image2025_04_05 from "@assets/2025-04-05.jpg";
+import Image2024_08_14_2 from "@assets/2024-08-14 (2).jpg";
+import Image2025_02_26 from "@assets/2025-02-26.jpg";
+import Image2024_08_14_1 from "@assets/2024-08-14 (1).jpg";
+import Image2025_02_03 from "@assets/2025-02-03.jpg";
+import Image2025_04_05_1 from "@assets/2025-04-05 (1).jpg";
+import Image2024_08_14 from "@assets/2024-08-14.jpg";
+import Image2024_10_27 from "@assets/2024-10-27.jpg";
 
 const HeroSection = () => {
   const { scrollToElement } = useSmoothScroll();
@@ -20,7 +27,7 @@ const HeroSection = () => {
     <section 
       className="relative h-screen bg-cover bg-center flex items-center"
       style={{
-        backgroundImage: `url(${Image2024_12_04})`,
+        backgroundImage: `url(${Image2024_08_14_2})`,
         backgroundPosition: 'center top',
         backgroundSize: 'cover'
       }}

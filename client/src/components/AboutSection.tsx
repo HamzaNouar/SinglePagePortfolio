@@ -2,6 +2,13 @@ import Image2024_12_04 from "@assets/2024-12-04.jpg";
 import Image2024_07_08 from "@assets/2024-07-08.jpg";
 import Image2025_04_20 from "@assets/2025-04-20.jpg";
 import Image2025_04_05 from "@assets/2025-04-05.jpg";
+import Image2024_08_14_2 from "@assets/2024-08-14 (2).jpg";
+import Image2025_02_26 from "@assets/2025-02-26.jpg";
+import Image2024_08_14_1 from "@assets/2024-08-14 (1).jpg";
+import Image2025_02_03 from "@assets/2025-02-03.jpg";
+import Image2025_04_05_1 from "@assets/2025-04-05 (1).jpg";
+import Image2024_08_14 from "@assets/2024-08-14.jpg";
+import Image2024_10_27 from "@assets/2024-10-27.jpg";
 
 const AboutSection = () => {
   return (
@@ -66,23 +73,23 @@ const AboutSection = () => {
           
           <div className="grid grid-cols-2 gap-4">
             <div className="overflow-hidden rounded-lg h-48 md:h-56 lg:h-64">
-              <img src={Image2024_12_04} 
-                  alt="Auto detailing process" 
+              <img src={Image2024_10_27} 
+                  alt="Blue BMW at Auto Spa Detailing" 
                   className="w-full h-full object-cover gallery-img" />
             </div>
             <div className="overflow-hidden rounded-lg h-48 md:h-56 lg:h-64">
-              <img src={Image2025_04_20} 
-                  alt="Car detailing result" 
+              <img src={Image2025_02_03} 
+                  alt="Premium vehicle with ceramic coating" 
                   className="w-full h-full object-cover gallery-img" />
             </div>
             <div className="overflow-hidden rounded-lg h-48 md:h-56 lg:h-64">
-              <img src={Image2024_07_08} 
-                  alt="Professional car wash studio" 
+              <img src={Image2024_08_14_1} 
+                  alt="Car washing process" 
                   className="w-full h-full object-cover gallery-img" />
             </div>
             <div className="overflow-hidden rounded-lg h-48 md:h-56 lg:h-64">
-              <img src={Image2025_04_05} 
-                  alt="Vehicle detailing" 
+              <img src={Image2024_08_14} 
+                  alt="Interior detailing" 
                   className="w-full h-full object-cover gallery-img" />
             </div>
           </div>
