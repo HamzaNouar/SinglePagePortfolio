@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import GallerySection from "@/components/GallerySection";
 import ReviewsSection from "@/components/ReviewsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -13,6 +14,7 @@ function App() {
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
   const reviewsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
@@ -20,6 +22,7 @@ function App() {
     home: homeRef,
     about: aboutRef,
     services: servicesRef,
+    gallery: galleryRef,
     reviews: reviewsRef,
     contact: contactRef,
   };
@@ -41,6 +44,9 @@ function App() {
         </div>
         <div ref={servicesRef} id="services">
           <ServicesSection />
+        </div>
+        <div ref={galleryRef} id="gallery">
+          <GallerySection />
         </div>
         <div ref={reviewsRef} id="reviews">
           <ReviewsSection />
