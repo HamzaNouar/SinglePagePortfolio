@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { useEffect, useRef } from "react";
 
 const HeroSection = () => {
   const { scrollToElement } = useSmoothScroll();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleScrollToServices = () => {
     scrollToElement("services");
@@ -12,17 +14,27 @@ const HeroSection = () => {
     scrollToElement("contact");
   };
 
+  // Make sure video loads and plays properly
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.error("Video playback failed:", error);
+      });
+    }
+  }, []);
+
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         <video 
+          ref={videoRef}
           autoPlay 
           muted 
           loop 
           playsInline
           className="absolute w-full h-full object-cover"
         >
-          <source src="assets/videoplayback.mp4" type="video/mp4" />
+          <source src="/videos/videoplayback.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 hero-gradient"></div>
