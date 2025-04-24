@@ -171,6 +171,8 @@ section {
 .menu-toggle {
   display: none;
   cursor: pointer;
+  z-index: 1001;
+  position: relative;
 }
 
 .bar {
@@ -179,6 +181,7 @@ section {
   background-color: white;
   margin: 5px 0;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Hero Section Styles */
@@ -238,12 +241,14 @@ section {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   color: #f8f9fa;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-buttons {
@@ -717,6 +722,10 @@ section {
     font-size: 2.5rem;
   }
   
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
   .menu-toggle {
     display: block;
   }
@@ -726,13 +735,15 @@ section {
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 250px;
-    background-color: #111;
+    width: 80%;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.95);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: right 0.3s ease;
-    z-index: 100;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
   }
   
   .nav-menu.active {
@@ -740,7 +751,12 @@ section {
   }
   
   .nav-menu li {
-    margin: 15px 0;
+    margin: 20px 0;
+  }
+  
+  .nav-menu .nav-link {
+    font-size: 1.2rem;
+    padding: 5px 0;
   }
   
   .menu-toggle.active .bar:nth-child(1) {
@@ -753,6 +769,10 @@ section {
   
   .menu-toggle.active .bar:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  .header.scrolled .menu-toggle .bar {
+    background-color: white;
   }
   
   .services-grid {
@@ -769,20 +789,94 @@ section {
     padding: 60px 0;
   }
   
-  .hero-content h1 {
-    font-size: 2rem;
+  .navbar {
+    padding: 0 10px;
   }
   
-  .hero-buttons {
-    flex-direction: column;
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .hero-section {
+    height: 100vh;
+    max-height: 800px;
+  }
+  
+  .hero-content {
+    text-align: left;
+    padding: 0 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
   }
   
   .btn {
+    padding: 12px 20px;
+    font-size: 14px;
     width: 100%;
     margin-bottom: 10px;
   }
   
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .rating {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .stars {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .rating span {
+    font-size: 0.9rem;
+  }
+  
+  .about-section, 
+  .services-section, 
+  .reviews-section, 
+  .contact-section {
+    padding: 50px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-card {
+    padding: 20px 15px;
+  }
+  
+  .map-container {
+    height: 300px;
+  }
+  
   .footer-content > div {
     flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+  
+  .footer {
+    padding: 50px 0 20px;
   }
 }
