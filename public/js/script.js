@@ -96,6 +96,7 @@ function initReviewsSlider() {
 // Fetch reviews from our server
 async function fetchReviews() {
   try {
+    // Using relative URL to fetch from the same origin
     const response = await fetch('/api/reviews');
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -103,6 +104,7 @@ async function fetchReviews() {
     return await response.json();
   } catch (error) {
     console.error('Error fetching reviews:', error);
+    // If the fetch fails, use our sample reviews as fallback
     return getSampleReviews();
   }
 }
