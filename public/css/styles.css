@@ -377,10 +377,30 @@ section {
   margin-bottom: 15px;
 }
 
-.price {
-  font-weight: 700;
-  color: #e63946;
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn i {
   font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
 }
 
 /* Reviews Section Styles */
@@ -895,6 +915,12 @@ section {
   
   .rating span {
     font-size: 0.9rem;
+  }
+  
+  .whatsapp-btn {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 0.95rem;
   }
   
   .review-card {
