@@ -194,11 +194,45 @@ function setupReviewsSlider() {
   const reviewCards = document.querySelectorAll('.review-card');
   const prevButton = document.getElementById('prevReview');
   const nextButton = document.getElementById('nextReview');
+  const reviewsSlider = document.getElementById('reviewsSlider');
   
   let currentIndex = 0;
-  const cardWidth = reviewCards[0].offsetWidth + 30; // card width + margin
+  let cardWidth;
   
-  // Initially show only the first review
+  // Function to update card width based on screen size
+  function updateCardWidth() {
+    // Get the current width including margins
+    cardWidth = reviewCards[0].offsetWidth + parseInt(window.getComputedStyle(reviewCards[0]).marginLeft) + 
+                parseInt(window.getComputedStyle(reviewCards[0]).marginRight);
+    
+    // Update position based on current index
+    reviewsContainer.style.transition = 'none'; // Temporarily disable transition
+    reviewsContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    // Force reflow
+    void reviewsContainer.offsetWidth;
+    // Re-enable transition
+    reviewsContainer.style.transition = 'transform 0.5s ease';
+  }
+  
+  // Update card width initially and on window resize
+  updateCardWidth();
+  window.addEventListener('resize', updateCardWidth);
+  
+  // Show swipe indicator only on small devices
+  const swipeIndicator = document.querySelector('.swipe-indicator');
+  if (window.innerWidth <= 768) {
+    swipeIndicator.style.display = 'flex';
+  }
+  
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+      swipeIndicator.style.display = 'flex';
+    } else {
+      swipeIndicator.style.display = 'none';
+    }
+  });
+  
+  // Initially show the first review
   reviewsContainer.style.transform = `translateX(0)`;
   
   // Next button click
@@ -206,6 +240,7 @@ function setupReviewsSlider() {
     if (currentIndex < reviewCards.length - 1) {
       currentIndex++;
       reviewsContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      updateButtonStates();
     }
   });
   
@@ -214,32 +249,74 @@ function setupReviewsSlider() {
     if (currentIndex > 0) {
       currentIndex--;
       reviewsContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      updateButtonStates();
     }
   });
   
-  // Add swipe functionality for mobile
+  // Enable/disable buttons based on current index
+  function updateButtonStates() {
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === reviewCards.length - 1;
+    
+    prevButton.style.opacity = currentIndex === 0 ? '0.5' : '1';
+    nextButton.style.opacity = currentIndex === reviewCards.length - 1 ? '0.5' : '1';
+  }
+  
+  // Initial button states
+  updateButtonStates();
+  
+  // Add swipe functionality for mobile with improved handling
   let touchStartX = 0;
   let touchEndX = 0;
+  let isSwiping = false;
   
-  reviewsContainer.addEventListener('touchstart', (e) => {
+  reviewsSlider.addEventListener('touchstart', (e) => {
     touchStartX = e.changedTouches[0].screenX;
-  }, false);
+    isSwiping = true;
+    
+    // Prevent default only if needed (careful with this)
+    // e.preventDefault();
+  }, { passive: true });
   
-  reviewsContainer.addEventListener('touchend', (e) => {
+  reviewsSlider.addEventListener('touchmove', (e) => {
+    if (!isSwiping) return;
+    
+    const currentX = e.changedTouches[0].screenX;
+    const diff = touchStartX - currentX;
+    
+    // Only prevent default when scrolling horizontally
+    if (Math.abs(diff) > 10) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+  
+  reviewsSlider.addEventListener('touchend', (e) => {
+    if (!isSwiping) return;
+    
     touchEndX = e.changedTouches[0].screenX;
+    isSwiping = false;
     handleSwipe();
-  }, false);
+  }, { passive: true });
   
   function handleSwipe() {
     const minSwipeDistance = 50;
+    const swipeDistance = touchStartX - touchEndX;
     
-    if (touchEndX + minSwipeDistance < touchStartX) {
-      // Swipe left (next)
-      nextButton.click();
+    // Hide swipe indicator after first swipe
+    if (Math.abs(swipeDistance) > minSwipeDistance) {
+      swipeIndicator.style.display = 'none';
     }
-    if (touchEndX > touchStartX + minSwipeDistance) {
+    
+    if (swipeDistance > minSwipeDistance) {
+      // Swipe left (next)
+      if (currentIndex < reviewCards.length - 1) {
+        nextButton.click();
+      }
+    } else if (swipeDistance < -minSwipeDistance) {
       // Swipe right (prev)
-      prevButton.click();
+      if (currentIndex > 0) {
+        prevButton.click();
+      }
     }
   }
 }

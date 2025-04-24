@@ -416,11 +416,20 @@ section {
   max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+}
+
+.reviews-slider:active {
+  cursor: grabbing;
 }
 
 .reviews-container {
   display: flex;
   transition: transform 0.5s ease;
+  will-change: transform;
 }
 
 .review-card {
@@ -430,6 +439,8 @@ section {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   margin: 0 15px;
+  user-select: none;
+  touch-action: pan-y;
 }
 
 .review-header {
@@ -460,6 +471,37 @@ section {
 .review-text {
   color: #555;
   line-height: 1.7;
+}
+
+.swipe-indicator {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 15px;
+  font-size: 0.9rem;
+  color: #666;
+  animation: pulse 2s infinite;
+}
+
+.swipe-indicator i {
+  margin-left: 8px;
+  font-size: 1.1rem;
+  color: #e63946;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateX(0);
+  }
 }
 
 .slider-controls {
@@ -853,6 +895,22 @@ section {
   
   .rating span {
     font-size: 0.9rem;
+  }
+  
+  .review-card {
+    padding: 20px 15px;
+    margin: 0 10px;
+  }
+  
+  .slider-controls {
+    margin-top: 20px;
+  }
+  
+  .slider-control {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
   
   .about-section, 
