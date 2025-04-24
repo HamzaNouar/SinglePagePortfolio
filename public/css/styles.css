@@ -101,7 +101,7 @@ section {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: transparent;
   transition: all 0.3s ease;
   padding: 20px 0;
 }
@@ -233,17 +233,6 @@ section {
   color: white;
   position: relative;
   z-index: 1;
-}
-
-.mobile-header {
-  display: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content h1 {
@@ -801,8 +790,11 @@ section {
   }
   
   .header {
-    background-color: rgba(0, 0, 0, 0.85);
     padding: 15px 0;
+  }
+  
+  .header.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
   }
   
   .navbar {
@@ -818,11 +810,6 @@ section {
     height: 100vh;
     max-height: 800px;
     padding-top: 60px;
-  }
-  
-  .mobile-header {
-    display: block;
-    margin-bottom: 5px;
   }
   
   .hero-content {
